@@ -1,7 +1,12 @@
 <template>
   <div class="home">
-    <img src="@/assets/download.png" alt="" />
+    <van-swipe :autoplay="3000" height="100" :show-indicators="false">
+      <van-swipe-item v-for="(image, index) in images" :key="index">
+        <img v-lazy="image" />
+      </van-swipe-item>
+    </van-swipe>
     <router-view />
+
     <van-tabbar route>
       <van-tabbar-item replace to="/" icon="bar-chart-o">行情</van-tabbar-item>
       <van-tabbar-item replace to="/platform" icon="exchange"
@@ -18,11 +23,14 @@
   </div>
 </template>
 <script>
+import download from "@/assets/download.png";
+import MainValueVue from "./components/MainValue.vue";
 export default {
   name: "HomeView",
   data() {
     return {
       active: 0,
+      images: [download, download],
     };
   },
   components: {
@@ -128,5 +136,8 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+html {
+  font-size: 40px;
 }
 </style>
