@@ -1403,7 +1403,7 @@ export default {
     margin-bottom: 1rem;
   }
   .block {
-    padding: 8px 5px;
+    padding: 10px 5px;
     background-color: #fff;
     font-size: 16px;
     font-weight: 700;

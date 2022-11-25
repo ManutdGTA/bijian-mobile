@@ -2798,7 +2798,8 @@ export default {
     margin-bottom: 1rem;
   }
   .block {
-    padding: 5px;
+    padding: 10px 5px;
+
     background-color: #fff;
     font-size: 14px;
     display: flex;
