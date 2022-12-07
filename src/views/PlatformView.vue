@@ -1,7 +1,9 @@
 <template>
   <div class="plaform_page">
     <div class="container">
-      <div class="block top">
+      <TopSearch></TopSearch>
+
+      <div class="block top" >
         <span class="first">#</span>
         <span class="second">交易所</span>
         <span class="third">24H额($)</span>
@@ -14,7 +16,7 @@
           finished-text="没有更多了"
           @load="onLoad"
         >
-          <div v-for="item in list" :key="item.id" class="block">
+          <div v-for="item in list" :key="item.id" class="block" @click="handleDetail(item)">
             <span class="first">{{ item.rank }}</span>
             <div class="second">
               <div class="left">
@@ -47,8 +49,14 @@
 
 <script>
 import btc from "@/assets/bitcoin.webp";
+import TopSearch from "../components/TopSearch.vue";
+
 export default {
   name: "PlatformView",
+  components: {
+    // HelloWorld,
+    TopSearch,
+  },
   data() {
     return {
       list: [
@@ -1387,6 +1395,12 @@ export default {
       // this.loading = true;
       this.onLoad();
     },
+    handleDetail(item) {
+      this.$router.push({
+        name: "platformDetail",
+        query: { code: item.id },
+      });
+    },
   },
 };
 </script>
@@ -1394,16 +1408,16 @@ export default {
 <style lang="less" scoped>
 .plaform_page {
   // height: 5.46667rem;
-  padding: 0.53333rem 0.3rem;
-  background: linear-gradient(1turn, #f9f9fa, #1069fb 50%);
-  background-size: 100% 5.46667rem;
-  background-repeat: no-repeat;
+  // padding: 0.53333rem 0.3rem;
+  // background: linear-gradient(1turn, #f9f9fa, #1069fb 50%);
+  // background-size: 100% 5.46667rem;
+  // background-repeat: no-repeat;
 
   .container {
     margin-bottom: 1rem;
   }
   .block {
-    padding: 10px 5px;
+    padding: 0.33333rem 0.3rem;
     background-color: #fff;
     font-size: 16px;
     font-weight: 700;

@@ -28,7 +28,7 @@
           <div>
             <div class="van-overlay" style="z-index: 2022; display: none">
               <div class="openApp_box">
-                <img src="assets/img/blackImg.7cd79bc9.png" alt="" />
+                <img src="../assets/blackImg.7cd79bc9.png" alt="" />
                 <div class="open_text">请点击右上角按钮，选择在浏览器打开</div>
                 <i class="van-icon van-icon-close" style="font-size: 38px"
                   ><!----></i
@@ -50,7 +50,7 @@
         <div>
           <div class="van-overlay" style="z-index: 2022; display: none">
             <div class="openApp_box">
-              <img src="assets/img/blackImg.7cd79bc9.png" alt="" />
+              <img src="../assets/blackImg.7cd79bc9.png" alt="" />
               <div class="open_text">请点击右上角按钮，选择在浏览器打开</div>
               <i class="van-icon van-icon-close" style="font-size: 38px"
                 ><!----></i

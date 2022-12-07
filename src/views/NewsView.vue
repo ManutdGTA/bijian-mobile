@@ -8,7 +8,12 @@
           finished-text="没有更多了"
           @load="onLoad"
         >
-          <div v-for="item in list" :key="item.id" class="block">
+          <div
+            v-for="item in list"
+            :key="item.id"
+            class="block"
+            @click="handleDetail(item.id)"
+          >
             <div class="article_list">
               <div class="top_box">
                 <div class="top_user">
@@ -684,6 +689,12 @@ export default {
       // 将 loading 设置为 true，表示处于加载状态
       // this.loading = true;
       this.onLoad();
+    },
+    handleDetail(item) {
+      this.$router.push({
+        name: "newsDetail",
+        query: { code: item },
+      });
     },
   },
 };
