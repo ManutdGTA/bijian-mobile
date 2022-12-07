@@ -15,7 +15,9 @@ import { PullRefresh } from "vant";
 import { Cell, CellGroup } from "vant";
 import { DropdownMenu, DropdownItem } from "vant";
 import { Progress } from 'vant';
+import { Field } from 'vant';
 
+Vue.use(Field);
 Vue.use(Progress);
 Vue.use(DropdownMenu);
 Vue.use(DropdownItem);

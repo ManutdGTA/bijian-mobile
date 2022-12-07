@@ -25,6 +25,8 @@
 <script>
 import download from "@/assets/download.png";
 import MainValueVue from "./components/MainValue.vue";
+import TopSearch from "./components/TopSearch.vue";
+
 export default {
   name: "HomeView",
   data() {
@@ -35,6 +37,7 @@ export default {
   },
   components: {
     // HelloWorld,
+    TopSearch,
   },
 };
 </script>
